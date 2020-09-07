@@ -17,6 +17,12 @@
     "analytics",
     "html-webpack-plugin"
   ],
+  "scripts": {
+    "lint:nofix": "eslint src/**/*.js -f table",
+    "lint": "eslint src/**/*.js --fix",
+    "test:watch": "jest --watch --config jest.config.js",
+    "test": "jest --coverage --config jest.config.js"
+  },
   "author": {
     "name": "Tim Jorjev",
     "email": "dev@timjorjev.com"
@@ -24,11 +30,18 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "common-tags": "1.8.0"
+    "jest": "^26.4.2",
+    "common-tags": "1.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint": "^7.8.1",
+    "prettier": "^2.1.1"
   },
   "peerDependencies": {
-    "html-webpack-plugin": "4.0.0-beta.8",
-    "webpack": "4.41.0",
-    "webpack-cli": "3.3.9"
+    "html-webpack-plugin": "4.4.1",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12"
   }
 }
